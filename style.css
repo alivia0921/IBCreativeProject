@@ -1,0 +1,95 @@
+/* CSS for the map pin section */
+* {
+    font-family: Georgia, serif; 
+}
+
+#image-map {
+    position: relative;
+    margin: 10px auto 20px auto
+}
+
+.source {
+  font-size: smaller;
+  text-decoration: underline;
+}
+
+.pin {
+    display: none;
+}
+
+.tooltip-up, .tooltip-down {
+    position: absolute;
+    background: url(https://i.imgur.com/13rZbuk.png);
+    width: 25px;
+    height: 37px;
+}
+
+.tooltip-down {
+    background-position: 0 -37px;
+}
+
+.tooltip {
+    display: none;
+    width: 400px;
+    cursor: help;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    z-index: 999;
+    margin-left: -200px;
+    padding:10px;
+    color: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 0 rgba(0,0,0,.7);
+    background: rgb(235, 209, 255);
+}
+
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-top: 10px solid purple;
+  border-left: 10px solid transparent;
+  border-right : 10px solid transparent;
+}
+
+.tooltip-down .tooltip {
+    bottom: 12px;
+    top: auto;
+}
+
+.tooltip-down .tooltip::after {
+    bottom: -20px;
+    top: auto;
+    border-bottom: 0;
+    border-top: 10px solid purple;
+}
+
+.tooltip h2 {
+  font: bold 1.2em 'Arial', Tahoma, Arial;
+}
+
+.tooltip ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* CSS for the puzzle game section */
+.tile {
+  display: table-cell;
+  width: 266px;
+  height: 150px;
+  border: 1px solid black;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.tile9 {
+    background: white; 
+    cursor: default;
+}
